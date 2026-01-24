@@ -19,8 +19,31 @@
 
 ## 🛠 설치 방법
 
+환경에 따라 다양한 방법으로 `jeomaechu`를 설치할 수 있습니다.
+
+### 1. 파이썬 (PIP) - 권장
+가장 표준적인 설치 방법입니다.
 ```bash
-pip install .
+pip install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
+```
+
+### 2. 한 줄 명령어 (Curl)
+Linux/macOS 사용자라면 한 줄로 간편하게 설치할 수 있습니다.
+```bash
+curl -sSL https://raw.githubusercontent.com/hslcrb/pypack_jeomaechu/main/scripts/install.sh | bash
+```
+
+### 3. 도커 (Docker)
+로컬 환경을 깨끗하게 유지하면서 도커를 통해 바로 실행할 수 있습니다.
+```bash
+# 이미지를 내려받고 즉시 실행
+docker run -it --rm ghcr.io/hslcrb/jeomaechu:latest
+```
+
+### 4. Pipx (독립 환경)
+글로벌 파이썬 환경을 오염시키지 않고 실행 파일만 설치하고 싶을 때 사용합니다.
+```bash
+pipx install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
 ```
 
 ---

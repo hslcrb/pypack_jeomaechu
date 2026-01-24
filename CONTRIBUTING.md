@@ -64,5 +64,6 @@ Rules for adding new features or commands for user convenience:
 - **Python**: Follow PEP 8 guidelines. Use type hints for functions and variables wherever possible.
 - **Markdown**: Use consistent header hierarchies and table formats to ensure readability.
 - **Bilingual Support**: Try to update both English and Korean versions (README, CONTRIBUTING) to maintain global accessibility.
+- **Install Methods**: When adding dependencies or changing entry points, ensure it doesn't break Docker or Curl installation methods.
 
 Your contribution, no matter how small, helps someone enjoy a better lunch today. Happy coding and happy eating! 🍱

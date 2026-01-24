@@ -19,8 +19,31 @@ A massive, professional-grade lunch menu recommendation engine for Python. Never
 
 ## 🛠 Installation
 
+You can install `jeomaechu` using various methods depending on your environment.
+
+### 1. Python (PIP) - Recommended
+Standard installation via pip.
 ```bash
-pip install .
+pip install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
+```
+
+### 2. One-liner (Curl)
+Quick installation for Linux/macOS.
+```bash
+curl -sSL https://raw.githubusercontent.com/hslcrb/pypack_jeomaechu/main/scripts/install.sh | bash
+```
+
+### 3. Docker
+Run without local installation using Docker.
+```bash
+# Pull and run directly
+docker run -it --rm ghcr.io/hslcrb/jeomaechu:latest
+```
+
+### 4. Pipx (Isolated Environment)
+If you prefer to keep your global python environment clean.
+```bash
+pipx install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
 ```
 
 ---

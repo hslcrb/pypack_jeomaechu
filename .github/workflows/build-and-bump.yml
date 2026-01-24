@@ -88,5 +88,5 @@ jobs:
         run: |
           gh release create v${{ needs.bump-version.outputs.NEW_VERSION }} \
             --title "v${{ needs.bump-version.outputs.NEW_VERSION }}" \
-            --notes "자동 배포 릴리스 v${{ needs.bump-version.outputs.NEW_VERSION }}" \
+            --generate-notes \
             dist/*

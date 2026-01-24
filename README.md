@@ -1,5 +1,7 @@
 # jeomaechu (점메추) 🍱
 
+[한국어 버전](README_ko.md)
+
 A massive, professional-grade lunch menu recommendation engine for Python. Never worry about "What should I eat for lunch?" ever again. Featuring over 600+ curated items from authentic global cuisines to realistic everyday home meals.
 
 ---

@@ -1,5 +1,7 @@
 # 주의사항 (NOTICE)
 
+[English Version](NOTICE.md)
+
 프로젝트 이름: jeomaechu (점메추)
 Copyright (c) 2026 Rheehose
 

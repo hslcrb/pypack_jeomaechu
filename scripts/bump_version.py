@@ -24,6 +24,15 @@ def bump_version():
     
     new_content = re.sub(pattern, f'version = "{new_version}"', content)
     toml_path.write_text(new_content)
+    
+    # Update __init__.py
+    init_path = Path("jeomaechu/__init__.py")
+    if init_path.exists():
+        init_content = init_path.read_text()
+        init_pattern = r'__version__\s*=\s*"(\d+)\.(\d+)\.(\d+)"'
+        new_init_content = re.sub(init_pattern, f'__version__ = "{new_version}"', init_content)
+        init_path.write_text(new_init_content)
+
     print(new_version)
 
 if __name__ == "__main__":

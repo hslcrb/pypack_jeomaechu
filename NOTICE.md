@@ -3,7 +3,7 @@
 [한국어 버전](NOTICE_ko.md)
 
 Project Name: jeomaechu (점메추)
-Copyright (c) 2026 Rheehose
+Copyright (c) 2008-2026 Rheehose (Rhee Creative)
 
 ## Data Source & Copyrights
 - The menu database in this project is curated based on general food trends and Korean/Global food cultures.

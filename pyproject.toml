@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.9"
 license = "MIT"
 authors = [
-    { name = "Rheehose", email = "rheehose@example.com" }
+    { name = "Rheehose (Rhee Creative)", email = "rheehose@example.com" }
 ]
 keywords = ["lunch", "recommendation", "korean", "food", "jeomaechu"]
 classifiers = [

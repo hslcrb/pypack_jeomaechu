@@ -143,5 +143,11 @@ categories = engine.get_categories()
 
 ---
 
+---
+
 ## ⚖️ 라이선스
 MIT License. 상세 내용은 [LICENSE](LICENSE) 파일을 참조하세요.
+
+---
+**제작:** Rheehose (Rhee Creative) (2008-2026)  
+**업데이트:** 2026.01.24 (토) KST

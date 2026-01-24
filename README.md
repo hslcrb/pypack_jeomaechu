@@ -145,3 +145,7 @@ categories = engine.get_categories()
 
 ## ⚖️ License
 MIT License. See [LICENSE](LICENSE) for details.
+
+---
+**Author:** Rheehose (Rhee Creative) (2008-2026)  
+**Last Updated:** 2026.01.24 (Sat) KST

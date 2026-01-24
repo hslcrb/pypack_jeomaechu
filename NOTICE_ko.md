@@ -3,7 +3,7 @@
 [English Version](NOTICE.md)
 
 프로젝트 이름: jeomaechu (점메추)
-Copyright (c) 2026 Rheehose
+Copyright (c) 2008-2026 Rheehose (Rhee Creative)
 
 ## 데이터 출처 및 저작권
 - 본 프로젝트의 메뉴 데이터베이스는 일반적인 음식 트렌드와 한국 및 글로벌 음식 문화를 바탕으로 큐레이션되었습니다.

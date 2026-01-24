@@ -11,3 +11,4 @@ Copyright (c) 2026 Rheehose
 This project uses the following libraries:
 - **Typer**: (MIT License) - For the CLI framework.
 - **Rich**: (MIT License) - For terminal formatting and styling.
+

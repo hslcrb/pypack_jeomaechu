@@ -1,0 +1,13 @@
+# NOTICE
+
+Project Name: jeomaechu (점메추)
+Copyright (c) 2026 Rheehose
+
+## Data Credit
+- The menu database in this project is curated based on general food trends and common knowledge of Korean/Global cuisines.
+- Some brand names included in the "Brand (프랜차이즈/매장)" category are trademarks of their respective owners. This project is not affiliated with, endorsed by, or sponsored by any of these companies. They are used for informational purposes (as lunch options) only.
+
+## Third-Party Libraries
+This project uses the following libraries:
+- **Typer**: (MIT License) - For the CLI framework.
+- **Rich**: (MIT License) - For terminal formatting and styling.

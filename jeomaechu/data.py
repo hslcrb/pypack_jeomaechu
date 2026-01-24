@@ -139,5 +139,13 @@ TAGS: Dict[str, List[str]] = {
     "Daily (일상)": [
         item for sublist in [MENU_DATA["Korean (한식)"], MENU_DATA["Real Home (찐 집밥/현실)"]] for item in sublist
     ],
+    "Snack (분식)": [
+        item for sublist in MENU_DATA.values() for item in sublist
+        if any(w in item for w in ["떡볶이", "순대", "튀김", "어묵", "김밥", "라면", "쫄면", "비빔면", "만두"])
+    ],
+    "Bar Food (술안주)": [
+        item for sublist in MENU_DATA.values() for item in sublist
+        if any(w in item for w in ["치킨", "피자", "곱창", "대창", "닭발", "오돌뼈", "똥집", "전", "골뱅이", "탕", "회", "육회", "보쌈", "족발"])
+    ],
     "Everything (전체)": [item for sublist in MENU_DATA.values() for item in sublist] # Fallback for 100% coverage
 }

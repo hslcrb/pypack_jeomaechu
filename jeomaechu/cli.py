@@ -149,5 +149,119 @@ def show_all():
 def all_alias():
     show_all()
 
+# --- Pro Shorthand Commands (Direct Korean) ---
+
+@app.command(name="대충", help="귀찮을 때 초간단 메뉴 추천")
+def quick_korean(count: int = 1):
+    _perform_pick(tag="Quick (간편한/초간단)", count=count)
+
+@app.command(name="집밥", help="현실적인 집밥 메뉴 추천")
+def home_korean(count: int = 1):
+    _perform_pick(category="Real Home (찐 집밥/현실)", count=count)
+
+@app.command(name="자취", help="자취생을 위한 메뉴 추천")
+def bachelor_korean(count: int = 1):
+    _perform_pick(category="Real Home (찐 집밥/현실)", count=count)
+
+@app.command(name="자취생", hidden=True)
+def bachelor_alias(count: int = 1):
+    _perform_pick(category="Real Home (찐 집밥/현실)", count=count)
+
+@app.command(name="혼밥", help="혼자 먹기 좋은 메뉴")
+def solo_korean(count: int = 1):
+    _perform_pick(category="Real Home (찐 집밥/현실)", count=count)
+
+@app.command(name="자취요리", hidden=True)
+def solo_alias(count: int = 1):
+    _perform_pick(category="Real Home (찐 집밥/현실)", count=count)
+
+@app.command(name="분식", help="떡볶이, 김밥 등 분식 추천")
+def snack_direct(count: int = 1):
+    _perform_pick(tag="Snack (분식)", count=count)
+
+@app.command(name="술안주", help="안주로도 좋은 메뉴")
+def bar_direct(count: int = 1):
+    _perform_pick(tag="Bar Food (술안주)", count=count)
+
+@app.command(name="안주", hidden=True)
+def bar_alias(count: int = 1):
+    _perform_pick(tag="Bar Food (술안주)", count=count)
+
+@app.command(name="한식", help="바로 한식 추천")
+def korean_direct(count: int = 1):
+    _perform_pick(category="Korean (한식)", count=count)
+
+@app.command(name="중식", help="바로 중식 추천")
+def chinese_direct(count: int = 1):
+    _perform_pick(category="Chinese (중국어/중식)", count=count)
+
+@app.command(name="일식", help="바로 일식 추천")
+def japanese_direct(count: int = 1):
+    _perform_pick(category="Japanese (일본어/일식)", count=count)
+
+@app.command(name="양식", help="바로 양식 추천")
+def western_direct(count: int = 1):
+    _perform_pick(category="Western (양식)", count=count)
+
+@app.command(name="고기", help="무조건 고기!")
+def meat_direct(count: int = 1):
+    _perform_pick(tag="Meat (고기)", count=count)
+
+@app.command(name="해물", help="해산물/생선 요리")
+def seafood_direct(count: int = 1):
+    _perform_pick(tag="Seafood (해산물)", count=count)
+
+@app.command(name="매운거", help="스트레스 풀리는 매운 음식")
+def spicy_direct(count: int = 1):
+    _perform_pick(tag="Spicy (매콤)", count=count)
+
+@app.command(name="매워", hidden=True)
+def spicy_alias(count: int = 1):
+    _perform_pick(tag="Spicy (매콤)", count=count)
+
+@app.command(name="국물", help="뜨끈한 국물 요리")
+def soupy_direct(count: int = 1):
+    _perform_pick(tag="Soupy (국물/수프)", count=count)
+
+@app.command(name="해장", help="어제 술 마셨다면? 해장 메뉴")
+def hangover_direct(count: int = 1):
+    _perform_pick(tag="Soupy (국물/수프)", count=count)
+
+@app.command(name="면", help="호로록 면 요리")
+def noodle_direct(count: int = 1):
+    _perform_pick(tag="Noodle (면)", count=count)
+
+@app.command(name="밥", help="역시 한국인은 밥!")
+def rice_direct(count: int = 1):
+    _perform_pick(tag="Rice (밥)", count=count)
+
+@app.command(name="건강", help="가볍고 건강한 식사")
+def healthy_direct(count: int = 1):
+    _perform_pick(tag="Healthy (건강식)", count=count)
+
+@app.command(name="다이어트", hidden=True)
+def diet_alias(count: int = 1):
+    _perform_pick(tag="Healthy (건강식)", count=count)
+
+@app.command(name="헤비", help="오늘은 기름지고 든든하게!")
+def heavy_direct(count: int = 1):
+    _perform_pick(tag="Heavy (든든/헤비)", count=count)
+
+@app.command(name="기름진거", hidden=True)
+def oily_alias(count: int = 1):
+    _perform_pick(tag="Heavy (든든/헤비)", count=count)
+
+@app.command(name="브랜드", help="유명 프랜차이즈 메뉴")
+def brand_direct(count: int = 1):
+    _perform_pick(category="Brand (프랜차이즈/매장)", count=count)
+
+@app.command(name="프차", hidden=True)
+def franchise_alias(count: int = 1):
+    _perform_pick(category="Brand (프랜차이즈/매장)", count=count)
+
+@app.command(name="아무거나", help="진짜 아무거나 추천해줘!")
+def anything_direct(count: int = 1):
+    _perform_pick(count=count)
+
 if __name__ == "__main__":
     app()

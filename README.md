@@ -54,19 +54,45 @@ Browse the massive database.
 - `jeomaechu tags`: List all available mood/ingredient tags.
 - `jeomaechu all`: View the **ENTIRE** menu database (formatted tables).
 
-### ⚡ Shorthand Commands (Super Fast)
-For those in a real hurry:
+### ⚡ Shorthand & Pro Commands
+For those in a real hurry, we support direct Korean commands for specific moods.
 
-| Full Command | Shorthand | Filter Shorthand | Example |
-| :--- | :--- | :--- | :--- |
-| `jeomaechu` | `j` | - | `j` |
-| `pick` | `p` | - | `j p -n 5` |
-| `cats` | `c` | - | `j c` |
-| `tags` | `t` | - | `j t` |
-| `all` | `a` | - | `j a` |
+**Pro Korean Commands:**
+| Command | Description | Based on |
+| :--- | :--- | :--- |
+| `집밥` | Realistic home meals | Real Home Category |
+| `자취` / `혼밥` | Bachelor/Solo meals | Real Home Category |
+| `대충` | Quick & Easy | Quick Tag |
+| `한식` / `중식` / `일식` / `양식` | Instant Category Pick | Respective Categories |
+| `고기` / `해물` | Favorite Ingredients | Meat / Seafood Tag |
+| `매운거` / `매워` | Spicy food | Spicy Tag |
+| `국물` / `해장` | Soupy / Hangover meals | Soupy Tag |
+| `면` / `밥` | Noodles / Rice | Noodle / Rice Tag |
+| `분식` | Korean snacks (Tteokbokki, etc) | Snack Tag |
+| `술안주` / `안주` | Bar food / Snacks | Bar Food Tag |
+| `건강` / `다이어트` | Healthy / Diet meals | Healthy Tag |
+| `헤비` / `기름진거` | Heavy / Oily meals | Heavy Tag |
+| `브랜드` / `프차` | Chain restaurants | Brand Category |
+| `아무거나` | Absolute random | All |
 
-**Category Abbreviations:**
-You can use single characters for categories with `-c`:
+**Usage Examples:**
+```bash
+j 집밥        # 1 Real home meal recommendation
+j 자취 -n 3   # 3 Bachelor meal recommendations
+j 매워        # Spicy food recommendation
+j 해장        # Soup/Hangover food recommendation
+```
+
+**System Command Shorthands:**
+| Full Command | Shorthand | Example |
+| :--- | :--- | :--- |
+| `jeomaechu` | `j` | `j` |
+| `pick` | `p` | `j p -n 5` |
+| `cats` | `c` | `j c` |
+| `tags` | `t` | `j t` |
+| `all` | `a` | `j a` |
+
+**Category Abbreviations (for `-c`):**
 - `한`: Korean
 - `중`: Chinese
 - `일`: Japanese

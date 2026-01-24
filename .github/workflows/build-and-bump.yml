@@ -1,0 +1,51 @@
+name: Build and Auto-Versioning
+
+on:
+  push:
+    branches: [ main ]
+    paths-ignore:
+      - 'README.md'
+      - 'README_ko.md'
+      - '.github/workflows/**'
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Bump Version
+        id: bump
+        run: |
+          VERSION=$(python scripts/bump_version.py)
+          echo "NEW_VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Commit and Push Version Bump
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add pyproject.toml
+          git commit -m "chore(version): bump to ${{ env.NEW_VERSION }} [skip ci]"
+          git push
+
+  build-docker:
+    needs: bump-version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # Get the latest version with bumped pyproject.toml
+
+      - name: Build Docker Image
+        run: |
+          docker build -t jeomaechu:latest .

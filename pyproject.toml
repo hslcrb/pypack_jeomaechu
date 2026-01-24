@@ -27,5 +27,9 @@ dependencies = [
 jeomaechu = "jeomaechu.cli:app"
 j = "jeomaechu.cli:app"
 
+[project.urls]
+Homepage = "https://rheehose.com"
+Repository = "https://github.com/hslcrb/pypack_jeomaechu"
+
 [tool.hatch.build.targets.wheel]
 packages = ["jeomaechu"]

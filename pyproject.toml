@@ -8,7 +8,7 @@ version = "0.1.7"
 description = "A professional lunch menu recommendation (Jeom-Mae-Chu) package for undecided souls."
 readme = "README.md"
 requires-python = ">=3.9"
-license = "MIT"
+license = { text = "MIT" }
 authors = [
     { name = "Rheehose (Rhee Creative)", email = "rheehose@rheehose.com" }
 ]

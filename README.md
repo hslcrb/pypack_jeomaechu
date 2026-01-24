@@ -60,10 +60,10 @@ For those in a real hurry, we support direct Korean commands for specific moods.
 **Pro Korean Commands:**
 | Command | Description | Based on |
 | :--- | :--- | :--- |
-| `집밥` | Realistic home meals | Real Home Category |
-| `자취` / `혼밥` | Bachelor/Solo meals | Real Home Category |
+| `집밥` / `자취` / `혼밥` | Realistic home/solo meals | Real Home Category |
 | `대충` | Quick & Easy | Quick Tag |
-| `한식` / `중식` / `일식` / `양식` | Instant Category Pick | Respective Categories |
+| `한식` / `중식` / `일식` / `양식` | Main 4 categories | Respective Categories |
+| `아시아` / `동남아` / `기타` | Asian cuisines (Thai, etc) | Asian Category |
 | `고기` / `해물` | Favorite Ingredients | Meat / Seafood Tag |
 | `매운거` / `매워` | Spicy food | Spicy Tag |
 | `국물` / `해장` | Soupy / Hangover meals | Soupy Tag |
@@ -72,6 +72,9 @@ For those in a real hurry, we support direct Korean commands for specific moods.
 | `술안주` / `안주` | Bar food / Snacks | Bar Food Tag |
 | `건강` / `다이어트` | Healthy / Diet meals | Healthy Tag |
 | `헤비` / `기름진거` | Heavy / Oily meals | Heavy Tag |
+| `글로벌` / `세계` | Global cuisines | Global Tag |
+| `전통` / `정통` | Authentic/Native taste | Authentic Tag |
+| `일상` / `맨날` | Daily/Regular meals | Daily Tag |
 | `브랜드` / `프차` | Chain restaurants | Brand Category |
 | `아무거나` | Absolute random | All |
 

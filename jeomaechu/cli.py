@@ -199,6 +199,18 @@ def chinese_direct(count: int = 1):
 def japanese_direct(count: int = 1):
     _perform_pick(category="Japanese (일본어/일식)", count=count)
 
+@app.command(name="아시아", help="아시아 요리 (베트남, 태국, 인도 등)")
+def asian_direct(count: int = 1):
+    _perform_pick(category="Asian (아시아/기타)", count=count)
+
+@app.command(name="동남아", hidden=True)
+def asian_alias1(count: int = 1):
+    _perform_pick(category="Asian (아시아/기타)", count=count)
+
+@app.command(name="기타", hidden=True)
+def asian_alias2(count: int = 1):
+    _perform_pick(category="Asian (아시아/기타)", count=count)
+
 @app.command(name="양식", help="바로 양식 추천")
 def western_direct(count: int = 1):
     _perform_pick(category="Western (양식)", count=count)
@@ -250,6 +262,30 @@ def heavy_direct(count: int = 1):
 @app.command(name="기름진거", hidden=True)
 def oily_alias(count: int = 1):
     _perform_pick(tag="Heavy (든든/헤비)", count=count)
+
+@app.command(name="글로벌", help="전 세계 다양한 요리")
+def global_direct(count: int = 1):
+    _perform_pick(tag="Global (글로벌)", count=count)
+
+@app.command(name="세계", hidden=True)
+def global_alias(count: int = 1):
+    _perform_pick(tag="Global (글로벌)", count=count)
+
+@app.command(name="전통", help="전통/원어 느낌의 정통 요리")
+def authentic_direct(count: int = 1):
+    _perform_pick(tag="Authentic (전통/원어)", count=count)
+
+@app.command(name="정통", hidden=True)
+def authentic_alias(count: int = 1):
+    _perform_pick(tag="Authentic (전통/원어)", count=count)
+
+@app.command(name="일상", help="매일 먹어도 좋은 일상 메뉴")
+def daily_direct(count: int = 1):
+    _perform_pick(tag="Daily (일상)", count=count)
+
+@app.command(name="맨날", hidden=True)
+def daily_alias(count: int = 1):
+    _perform_pick(tag="Daily (일상)", count=count)
 
 @app.command(name="브랜드", help="유명 프랜차이즈 메뉴")
 def brand_direct(count: int = 1):

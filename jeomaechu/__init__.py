@@ -1,5 +1,5 @@
 from .core import JeomMaeChu
 
-__version__ = "0.1.5"
+__version__ = "0.1.6"
 __author__ = "Rheehose (Rhee Creative)"
 __all__ = ["JeomMaeChu"]

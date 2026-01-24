@@ -23,20 +23,32 @@ class JeomMaeChu:
         """Returns a random (category, menu) tuple."""
         return random.choice(self._all_options)
 
-    def recommend_many(self, count: int = 1, category: Optional[str] = None, tag: Optional[str] = None) -> List[Tuple[str, str]]:
+    def recommend_many(self, count: int = 1, categories: Optional[List[str]] = None, tags: Optional[List[str]] = None) -> List[Tuple[str, str]]:
         """Returns a list of unique random (category, menu) tuples with optional filtering."""
         options = self._all_options
         
-        if category:
-            if category in self.menus:
-                options = [(category, menu) for menu in self.menus[category]]
-            else:
+        if categories:
+            valid_categories = [c for c in categories if c in self.menus]
+            if not valid_categories:
                 return []
-        elif tag:
-            if tag in self.tags:
-                options = [(None, menu) for menu in self.tags[tag]] # Category is ambiguous for tags
-            else:
+            # Filter options that match ANY of the provided categories
+            options = [(cat, menu) for cat, menu in options if cat in valid_categories]
+
+        if tags:
+            valid_tags = [t for t in tags if t in self.tags]
+            if not valid_tags:
                 return []
+            
+            # Intersection: Menu must have ALL specified tags
+            # First, get sets of menus for each valid tag
+            tag_menu_sets = [set(self.tags[t]) for t in valid_tags]
+            intersected_menus = set.intersection(*tag_menu_sets) if tag_menu_sets else set()
+            
+            if not intersected_menus:
+                return []
+                
+            # Filter current options to only include those in the intersection
+            options = [(cat, menu) for cat, menu in options if menu in intersected_menus]
         
         pick_count = min(count, len(options))
         if pick_count <= 0:

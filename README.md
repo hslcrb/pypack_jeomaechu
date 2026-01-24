@@ -54,6 +54,29 @@ Browse the massive database.
 - `jeomaechu tags`: List all available mood/ingredient tags.
 - `jeomaechu all`: View the **ENTIRE** menu database (formatted tables).
 
+### ⚡ Shorthand Commands (Super Fast)
+For those in a real hurry:
+
+| Full Command | Shorthand | Filter Shorthand | Example |
+| :--- | :--- | :--- | :--- |
+| `jeomaechu` | `j` | - | `j` |
+| `pick` | `p` | - | `j p -n 5` |
+| `cats` | `c` | - | `j c` |
+| `tags` | `t` | - | `j t` |
+| `all` | `a` | - | `j a` |
+
+**Category Abbreviations:**
+You can use single characters for categories with `-c`:
+- `한`: Korean
+- `중`: Chinese
+- `일`: Japanese
+- `양`: Western
+- `집`: Real Home Meals
+- `아`: Asian
+- `상`: Brand/Franchise
+
+**Example:** `j p -c 한` (Recommended Korean menu)
+
 ---
 
 ## 🐍 Python API

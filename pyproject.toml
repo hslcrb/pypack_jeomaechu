@@ -25,6 +25,7 @@ dependencies = [
 
 [project.scripts]
 jeomaechu = "jeomaechu.cli:app"
+j = "jeomaechu.cli:app"
 
 [tool.hatch.build.targets.wheel]
 packages = ["jeomaechu"]

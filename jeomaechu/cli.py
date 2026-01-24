@@ -15,8 +15,23 @@ app = typer.Typer(
 console = Console()
 engine = JeomMaeChu()
 
+# Sorthand mapping for categories
+CAT_MAP = {
+    "한": "Korean (한식)",
+    "집": "Real Home (찐 집밥/현실)",
+    "일": "Japanese (일본어/일식)",
+    "중": "Chinese (중국어/중식)",
+    "양": "Western (양식)",
+    "아": "Asian (아시아/기타)",
+    "상": "Brand (프랜차이즈/매장)"
+}
+
 def _perform_pick(category: Optional[str] = None, tag: Optional[str] = None, count: int = 1):
     """Internal helper to avoid Typer OptionInfo issues during direct calls."""
+    # Resolve category shorthand
+    if category in CAT_MAP:
+        category = CAT_MAP[category]
+        
     console.print("[bold cyan]점심 메뉴를 추천해드립니다![/bold cyan]\n")
     
     if count > 1:
@@ -77,6 +92,15 @@ def pick(
     """Pick random lunch menus for today!"""
     _perform_pick(category, tag, count)
 
+# Alias commands
+@app.command(name="p", hidden=True)
+def pick_alias(
+    category: Optional[str] = typer.Option(None, "--category", "-c", help="카테고리 선택"),
+    tag: Optional[str] = typer.Option(None, "--tag", "-t", help="태그 선택"),
+    count: int = typer.Option(1, "--count", "-n", help="개수 선택")
+):
+    _perform_pick(category, tag, count)
+
 @app.command(name="cats", help="카테고리 목록 보기")
 def list_categories():
     """List all available menu categories."""
@@ -86,6 +110,10 @@ def list_categories():
         table.add_row(cat)
     console.print(table)
 
+@app.command(name="c", hidden=True)
+def cats_alias():
+    list_categories()
+
 @app.command(name="tags", help="태그 목록 보기")
 def list_tags():
     """List all available tags/moods."""
@@ -94,6 +122,10 @@ def list_tags():
     for tag in engine.get_tags():
         table.add_row(tag)
     console.print(table)
+
+@app.command(name="t", hidden=True)
+def tags_alias():
+    list_tags()
 
 @app.command(name="all", help="[cyan]전체 메뉴 데이터베이스 확인[/cyan]")
 def show_all():
@@ -112,6 +144,10 @@ def show_all():
         
         console.print(table)
         console.print("-" * 40)
+
+@app.command(name="a", hidden=True)
+def all_alias():
+    show_all()
 
 if __name__ == "__main__":
     app()

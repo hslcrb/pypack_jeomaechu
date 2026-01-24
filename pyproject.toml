@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jeomaechu"
-version = "0.1.1"
+version = "0.1.2"
 description = "A professional lunch menu recommendation (Jeom-Mae-Chu) package for undecided souls."
 readme = "README.md"
 requires-python = ">=3.9"

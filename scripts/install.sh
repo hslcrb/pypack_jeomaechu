@@ -11,8 +11,8 @@ if ! command -v python3 &> /dev/null; then
 fi
 
 # Install via Pip
-echo "📦 최신 버전을 GitHub에서 설치합니다..."
-python3 -m pip install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
+echo "📦 최신 버전을 PyPI에서 설치합니다..."
+python3 -m pip install jeomaechu
 
 echo "✅ 설치가 완료되었습니다!"
 echo "🚀 이제 터미널에 'jeomaechu' 또는 'j'를 입력하여 실행해보세요!"

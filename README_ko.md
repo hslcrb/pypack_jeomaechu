@@ -1,4 +1,5 @@
-# 점메추 (jeomaechu) 🍱
+[![PyPI version](https://badge.fury.io/py/jeomaechu.svg)](https://pypi.org/project/jeomaechu/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 [English Version](README.md)
 
@@ -22,9 +23,9 @@
 환경에 따라 다양한 방법으로 `jeomaechu`를 설치할 수 있습니다.
 
 ### 1. 파이썬 (PIP) - 권장
-가장 표준적인 설치 방법입니다.
+가장 표준적인 설치 방법입니다 (PyPI).
 ```bash
-pip install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
+pip install jeomaechu
 ```
 
 ### 2. 한 줄 명령어 (Curl)
@@ -43,7 +44,7 @@ docker run -it --rm ghcr.io/hslcrb/jeomaechu:latest
 ### 4. Pipx (독립 환경)
 글로벌 파이썬 환경을 오염시키지 않고 실행 파일만 설치하고 싶을 때 사용합니다.
 ```bash
-pipx install "git+https://github.com/hslcrb/pypack_jeomaechu.git"
+pipx install jeomaechu
 ```
 
 ---
